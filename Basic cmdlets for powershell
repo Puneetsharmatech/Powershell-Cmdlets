@@ -1,0 +1,4 @@
+$PSVersionTable       -  Output from this provides information about your PowerShell version, and your platform and edition.
+$PSVersionTable.PSVersion      -  This output gives you more details about your version of PowerShell.
+Get-Command -Noun alias*       -   This command searches for all cmdlets whose noun part starts with alias.
+Get-Command -Verb Get -Noun alias*        -  This Command narrowed the search to specify that the verb part needs to match Get, and the noun part needs to match alias.  (-Verb flag targets the part of the command name that's related to the verb.)
