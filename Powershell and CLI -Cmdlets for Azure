@@ -1,0 +1,20 @@
+# create a new user in CLI
+az ad user create
+
+# create a new user in powershell
+New-MgUser
+
+# create a bulk user in powershell
+$invitations = import-csv c:\bulkinvite\invitations.csv
+
+$messageInfo = [Microsoft.Graph.PowerShell.Models.MicrosoftGraphInvitation]@{ CustomizedMessageBody = "Hello. You are invited to the Contoso organization." }
+
+foreach ($email in $invitations)
+   {New-MgInvitation -InviteRedirectUrl https://myapps.microsoft.com -InvitedUserDisplayName $email.Name -InvitedUserEmailAddress $email.InvitedUserEmailAddress -InvitedUserMessageInfo $messageInfo -SendInvitationMessage 
+   }
+
+# Delete user account in CLI
+az ad user delete
+
+# Delete user account in Powershell
+Remove-MgUser
