@@ -1,1 +1,1 @@
-# Powershell-Cmdlets
+# Powershell and CLI -Cmdlets for Azure
