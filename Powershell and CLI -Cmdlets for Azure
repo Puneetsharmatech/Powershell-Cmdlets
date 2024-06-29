@@ -16,5 +16,5 @@ foreach ($email in $invitations)
 # Delete user account in CLI
 az ad user delete
 
-# Delete user account in Powershell
+# Delete user account azure through Powershell
 Remove-MgUser
