@@ -46,7 +46,8 @@ To create a Vnet peering
       az network vnet peering create --name MarketingVNet-To-SalesVNet --remote-vnet SalesVNet --resource-group "learn-ca8d9fcc-3214-4978-a671-57f2c1803cfa" --vnet-name MarketingVNet --allow-vnet-access
 
 
-
+To Check the list of vnet peering
+      az network vnet peering list --resource-group "learn-ca8d9fcc-3214-4978-a671-57f2c1803cfa" --vnet-name SalesVNet --query "[].{Name:name, Resource:resourceGroup, PeeringState:peeringState, AllowVnetAccess:allowVirtualNetworkAccess}" --output table
 
 
 
