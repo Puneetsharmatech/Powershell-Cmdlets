@@ -39,6 +39,12 @@ To create a subnet in vnet
        --address-prefixes 10.20.0.0/27
 
 
+To create a Vnet peering
+      az network vnet peering create --name SalesVNet-To-MarketingVNet --remote-vnet MarketingVNet --resource-group "learn-ca8d9fcc-3214-4978-a671-57f2c1803cfa" --vnet-name SalesVNet --allow-vnet-access
+      
+      to create a reciprocal connection(if you are using azure cli and powershell)
+      az network vnet peering create --name MarketingVNet-To-SalesVNet --remote-vnet SalesVNet --resource-group "learn-ca8d9fcc-3214-4978-a671-57f2c1803cfa" --vnet-name MarketingVNet --allow-vnet-access
+
 
 
 
