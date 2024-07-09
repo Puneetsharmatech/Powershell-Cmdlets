@@ -26,17 +26,17 @@ Remove-MgUser
 
 Azure virtual Network powershell Cmdlets
 To create virtual network:
-az network vnet create --resource-group "learn-e49cd506-ab0f-4614-88bd-e1dc84ed2993" --name CoreServicesVnet --address-prefixes 10.20.0.0/16 --location westus
+      az network vnet create --resource-group "learn-e49cd506-ab0f-4614-88bd-e1dc84ed2993" --name CoreServicesVnet --address-prefixes 10.20.0.0/16 --location westus
 
 To see all virtual network:
-az network vnet list
+      az network vnet list
 
 To create a subnet in vnet
-az network vnet subnet create \
-    --resource-group "[ resource group name]" \
-    --vnet-name CoreServicesVnet \
-    --name GatewaySubnet \
-    --address-prefixes 10.20.0.0/27
+      az network vnet subnet create \
+       --resource-group "[ resource group name]" \
+       --vnet-name CoreServicesVnet \
+       --name GatewaySubnet \
+       --address-prefixes 10.20.0.0/27
 
 
 
