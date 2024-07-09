@@ -1,13 +1,13 @@
 # create a new user in CLI
 az ad user create
 
-# create a new user in powershell
+# create a new user in CLI
 New-MgUser
 
-# create a bulk user in powershell
+# create a bulk user in CLI
 $invitations = import-csv c:\bulkinvite\invitations.csv
 
-$messageInfo = [Microsoft.Graph.PowerShell.Models.MicrosoftGraphInvitation]@{ CustomizedMessageBody = "Hello. You are invited to the Contoso organization." }
+$messageInfo = [Microsoft.Graph.CLI.Models.MicrosoftGraphInvitation]@{ CustomizedMessageBody = "Hello. You are invited to the Contoso organization." }
 
 foreach ($email in $invitations)
    {New-MgInvitation -InviteRedirectUrl https://myapps.microsoft.com -InvitedUserDisplayName $email.Name -InvitedUserEmailAddress $email.InvitedUserEmailAddress -InvitedUserMessageInfo $messageInfo -SendInvitationMessage 
@@ -16,7 +16,7 @@ foreach ($email in $invitations)
 # Delete user account in CLI
 az ad user delete
 
-# Delete user account azure through Powershell
+# Delete user account azure through CLI
 Remove-MgUser
 
 To create a VM in Azure
@@ -41,7 +41,7 @@ To see all VM in list
 
 
 
-Azure virtual Network powershell Cmdlets
+Azure virtual Network CLI Cmdlets
 To create virtual network:
       az network vnet create --resource-group "learn-e49cd506-ab0f-4614-88bd-e1dc84ed2993" --name CoreServicesVnet --address-prefixes 10.20.0.0/16 --location westus
 
@@ -59,7 +59,7 @@ To create a subnet in vnet
 To create a Vnet peering
       az network vnet peering create --name SalesVNet-To-MarketingVNet --remote-vnet MarketingVNet --resource-group "learn-ca8d9fcc-3214-4978-a671-57f2c1803cfa" --vnet-name SalesVNet --allow-vnet-access
       
-      to create a reciprocal connection(if you are using azure cli and powershell)
+      to create a reciprocal connection(if you are using azure cli and CLI)
       az network vnet peering create --name MarketingVNet-To-SalesVNet --remote-vnet SalesVNet --resource-group "learn-ca8d9fcc-3214-4978-a671-57f2c1803cfa" --vnet-name MarketingVNet --allow-vnet-access
 
 
