@@ -27,6 +27,9 @@ To see all VM in list:-
       az vm list --resource-group "learn-ca8d9fcc-3214-4978-a671-57f2c1803cfa" --query "[*].{Name:name, PrivateIP:privateIps, PublicIP:publicIps}" --show-details --output table
 
 
+To Create a Container under storage Account:-
+az storage container create --name patient-images --account-name $STORAGENAME --public-access off
+
 
 
 
