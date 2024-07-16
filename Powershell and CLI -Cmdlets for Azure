@@ -30,8 +30,8 @@ To see all VM in list:-
 To Create a Container under storage Account:-
 az storage container create --name patient-images --account-name $STORAGENAME --public-access off
 
-
-
+To upload files using upload batch:- 
+az storage blob upload-batch --source sas --destination patient-images --account-name $STORAGENAME --pattern *.jpg
 
 
 
