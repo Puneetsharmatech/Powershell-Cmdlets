@@ -23,7 +23,7 @@ To create a VM in Azure
       az vm create --resource-group "learn-ca8d9fcc-3214-4978-a671-57f2c1803cfa" --no-wait --name ResearchVM --location westeurope --vnet-name ResearchVNet --subnet Data --image Ubuntu2204 --admin-username azureuser --admin-password <password>
 
 
-To see all VM in list
+To see all VM in list:-
       az vm list --resource-group "learn-ca8d9fcc-3214-4978-a671-57f2c1803cfa" --query "[*].{Name:name, PrivateIP:privateIps, PublicIP:publicIps}" --show-details --output table
 
 
